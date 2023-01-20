@@ -5,7 +5,7 @@ const pass = document.querySelector('.pass');
 const fail = document.querySelector('.fail');
 
 async function getFlashcards() {
-  const response = await fetch('/flashcards/');
+  const response = await fetch('/');
   const data = await response.json();
   return data;
 }
@@ -15,15 +15,6 @@ getFlashcards().then(data => {
   term.innerHTML = flashcard.term;
   definition.innerHTML = flashcard.definition;
 });
-
-
-function getRandomWord(data) {
-  const flashcard = data[Math.floor(Math.random() * data.length)];
-  term.innerHTML = flashcard.term;
-  definition.innerHTML = flashcard.definition;
-}
-
-
 
 showAnswer.addEventListener('click', function () {
   // Display the definition
@@ -36,6 +27,7 @@ showAnswer.addEventListener('click', function () {
   // Hide the "Show Answer" button
   showAnswer.style.display = 'none';
 });
+
 
 function handleButtonClick(clickedButton) {
   // Get a new word and definition
@@ -65,3 +57,18 @@ pass.addEventListener('click', function () {
 fail.addEventListener('click', function () {
   handleButtonClick(fail);
 });
+
+async function getFlashcards() {
+  const response = await fetch('/');
+  const data = await response.json();
+  return data;
+}
+
+fetch('http://localhost:3001/')
+  .then(response => response.json())
+  .then(data => {
+    const flashcard = data.words[Math.floor(Math.random() * data.words.length)];
+    term.innerHTML = flashcard.term;
+    definition.innerHTML = flashcard.definition;
+  });
+
