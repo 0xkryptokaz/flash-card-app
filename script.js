@@ -1,8 +1,11 @@
-const term = document.querySelector('.term');
+const term = document.querySelector('.term')
 const definition = document.querySelector('.definition');
 const showAnswer = document.querySelector('.check');
 const pass = document.querySelector('.pass');
 const fail = document.querySelector('.fail');
+pass.style.display = 'none';
+fail.style.display = 'none';
+
 
 async function getFlashcards() {
   const response = await fetch('/');
@@ -27,7 +30,6 @@ showAnswer.addEventListener('click', function () {
   // Hide the "Show Answer" button
   showAnswer.style.display = 'none';
 });
-
 
 function handleButtonClick(clickedButton) {
   // Get a new word and definition
@@ -58,17 +60,10 @@ fail.addEventListener('click', function () {
   handleButtonClick(fail);
 });
 
-async function getFlashcards() {
-  const response = await fetch('/');
-  const data = await response.json();
-  return data;
-}
-
-fetch('http://localhost:3001/')
+fetch('http://localhost:3002/')
   .then(response => response.json())
   .then(data => {
     const flashcard = data.words[Math.floor(Math.random() * data.words.length)];
     term.innerHTML = flashcard.term;
     definition.innerHTML = flashcard.definition;
   });
-

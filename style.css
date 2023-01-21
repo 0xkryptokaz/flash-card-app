@@ -1,49 +1,47 @@
 .title {
-    text-align: center;
-  }
-  
-  .term {
-    border: solid 5px black;
-    border-radius: 15px;
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    margin-top: 100px;
-  }
-  
-  .definition {
-    border: solid 5px black;
-    border-radius: 15px;
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    margin-top: 100px;
-    display: none;
-  }
-  
-  .pass,
-  .fail {
-    display: flex;
-    justify-content: center;
-    width: 20rem;
-    margin: auto;
-  }
-
-
-  .button {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-  }
-  button {
-  color: white;
-  background-color: rgb(83, 235, 83);
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 25px;  
+  text-align: center;
 }
 
-  button:hover {
-    transform: scale(1.1);
-  }
-  
+.term {
+  font-size: 40px;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.definition {
+  font-size: 40px;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  margin-top: 100px;
+  display: none;
+}
+
+.pass,
+.fail {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  margin: auto;
+}
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+button {
+color: white;
+background-color: rgb(83, 235, 83);
+padding: 10px;
+border-radius: 15px;
+font-size: 25px;  
+}
+
+button:hover {
+  transform: scale(1.1);
+}
