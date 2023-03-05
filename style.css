@@ -1,5 +1,6 @@
 .title {
   text-align: center;
+  font-size: medium;
 }
 
 .term {
@@ -7,11 +8,11 @@
   text-align: center;
   width: 45%;
   margin: auto;
-  margin-top: 100px;
+
 }
 
 .definition {
-  font-size: 40px;
+  font-size: 20px;
   text-align: center;
   width: 45%;
   margin: auto;
@@ -19,19 +20,24 @@
   display: none;
 }
 
-.pass,
+ .pass,
 .fail {
-  display: flex;
-  justify-content: center;
-  width: 20rem;
-  margin: auto;
-}
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  margin: 0;
+  width:20rem;
+
+} 
 
 
 .button {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  flex-direction: row;
+  flex: 1 1 0;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 button {
@@ -44,4 +50,11 @@ font-size: 25px;
 
 button:hover {
   transform: scale(1.1);
+}
+
+.container {
+
+  overflow-y: scroll;
+  max-height: 500px;
+  border-radius: 5px;
 }
