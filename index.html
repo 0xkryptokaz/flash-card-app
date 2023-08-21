@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flash card </title>
-    <link href="style.css" rel="stylesheet">
-</head>
-
-<body onload="getRandomWord()">
-    <h1 class="title">Hello there welcome</h1>
-
-    <div class="term">
-        <h3 id="term">Term</h3>
-    </div>
- 
-    <div class="definition">
-        <h3 id="definition">Definition</h3>
-    </div>
-    <div class="button">
-        <button class="check">Show Answer</button>
-        <button class="pass">Pass &#x2713;</button>
-        <button class="fail">Fail &#x2713;</button>
-    </div>
-    <script src="script.js"></script>
-</body>
-
-</html>
+let NewComponent = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flash card </title>
+        <link href="style.css" rel="stylesheet" />
+        <h1 className="title">Hello there welcome</h1>
+        <div className="term">
+          <h3 id="term">Term</h3>
+        </div>
+        <div className="definition">
+          <h3 id="definition">Definition</h3>
+        </div>
+        <div className="button">
+          <button className="check">Show Answer</button>
+          <button className="pass">Pass ✓</button>
+          <button className="fail">Fail ✓</button>
+        </div>
+      </div>
+    );
+  }
+});
